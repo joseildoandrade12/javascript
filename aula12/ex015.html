@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condiçoes em JS</title>
+</head>
+
+<body>
+    <h1>Que hora é?</h1>
+    <input type="button" value="clique pra ver a hora!" onclick="resultado()">
+    <div id="hora">
+    </div>
+
+    <script>
+        function resultado() {
+            var hj = new Date
+            var horario = hj.getHours()
+            var hr = document.getElementById('hora')
+            hr.innerHTML = '';
+            hr.innerHTML = `A hora agora é ${horario} horas`;
+            if (horario <= 12) {
+                hr.innerHTML += '<br>Bom Dia'
+            } else if (horario <= 18) {
+                hr.innerHTML += '<br>Bom Tarde'
+            } else {
+                hr.innerHTML += '<br>Boa noite'
+            }
+        }
+    </script>
+</body>
+
+</html>

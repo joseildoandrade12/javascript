@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições em JS</title>
+</head>
+
+<body>
+    <h1>Idade para votar</h1>
+    <input type="number" name="txtn" id="txtn" placeholder="Qual a sua Idade?">
+    <input type="button" value="Resultado" onclick="calcular()">
+    <div id="resultado">
+
+    </div>
+
+    <script>
+        function calcular(){
+
+            var idade = document.getElementById('txtn')
+            var resul = document.getElementById('resultado')
+            var idav = Number(idade.value)
+
+            if (idav < 16) {
+                resul.innerHTML = 'Não vota'
+            } else if (idav < 18 || idav > 67 ) {
+                resul.innerHTML = 'Voto Opcional'
+            } else {
+                resul.innerHTML = 'Voto Obrigatório'
+            }
+
+        }
+    </script>
+</body>
+
+</html>
